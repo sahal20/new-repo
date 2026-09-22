@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wash & Goo | Express Car Wash & Detailing</title>
+  <style>
+    :root {
+      --primary: #0077b6;
+      --accent: #00b4d8;
+      --dark: #1f2937;
+      --light: #f8fafc;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      color: var(--dark);
+      background-color: var(--light);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    header {
+      background: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #023e8a, var(--primary));
+      color: var(--white);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Services Section */
+    .container {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+
+    .card.featured {
+      border: 2px solid var(--primary);
+      position: relative;
+    }
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 1rem 0;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .features-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .features-list li::before {
+      content: "✔ ";
+      color: var(--accent);
+    }
+
+    /* Booking Form */
+    .booking-section {
+      background: #eef8fb;
+      padding: 4rem 1.5rem;
+      border-radius: 12px;
+    }
+
+    .booking-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    input, select, button {
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+    }
+
+    button[type="submit"] {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <a href="#" class="logo">Wash &amp; <span>Goo</span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#book">Book Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Get Your Shine in No Time</h1>
+    <p>Professional touchless exterior washes, deep interior details, and premium ceramic wax protection.</p>
+    <a href="#book" class="cta-btn">Book an Appointment</a>
+  </section>
+
+  <!-- Pricing / Services -->
+  <main class="container" id="services">
+    <h2 class="section-title">Wash Packages</h2>
+    
+    <div class="cards-grid">
+      <!-- Quick Wash -->
+      <article class="card">
+        <h3>Quick Wash</h3>
+        <p class="price">$15</p>
+        <ul class="features-list">
+          <li>High-pressure rinse</li>
+          <li>Foam cannon soap</li>
+          <li>Wheel cleaning</li>
+          <li>Spot-free blow dry</li>
+        </ul>
+        <a href="#book" class="cta-btn" style="display:block;">Select</a>
+      </article>
+
+      <!-- Super Shine -->
+      <article class="card featured">
+        <h3>Super Shine</h3>
+        <p class="price">$30</p>
+        <ul class="features-list">
+          <li>Everything in Quick Wash</li>
+          <li>Underbody chassis blast</li>
+          <li>Tire dressing &amp; shine</li>
+          <li>Clear coat surface protectant</li>
+        </ul>
+        <a href="#book" class="cta-btn" style="display:block;">Select</a>
+      </article>
+
+      <!-- The Ultimate Goo -->
+      <article class="card">
+        <h3>The Ultimate Detail</h3>
+        <p class="price">$55</p>
+        <ul class="features-list">
+          <li>Everything in Super Shine</li>
+          <li>Triple-foam ceramic wax</li>
+          <li>Interior vacuum &amp; wipe down</li>
+          <li>Streak-free window polish</li>
+        </ul>
+        <a href="#book" class="cta-btn" style="display:block;">Select</a>
+      </article>
+    </div>
+  </main>
+
+  <!-- Simple Booking Section -->
+  <section class="container" id="book">
+    <div class="booking-section">
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">Reserve a Spot</h2>
+      <form class="booking-form" onsubmit="event.preventDefault(); alert('Booking request received!');">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required placeholder="Jane Doe" />
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" required placeholder="(555) 000-0000" />
+        </div>
+
+        <div class="form-group">
+          <label for="package">Choose Package</label>
+          <select id="package" required>
+            <option value="quick">Quick Wash ($15)</option>
+            <option value="super">Super Shine ($30)</option>
+            <option value="ultimate">The Ultimate Detail ($55)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" required />
+        </div>
+
+        <button type="submit">Confirm Reservation</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Wash &amp; Goo Auto Spa &bull; 100 Express Lane, Clean City</p>
+    <p>&copy; 2026 Wash &amp; Goo. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
